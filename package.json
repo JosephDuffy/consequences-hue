@@ -1,0 +1,36 @@
+{
+  "name": "consequences-hue",
+  "description": "Support for the Philips Hue family of devices",
+  "author": "Joseph Duffy",
+  "version": "0.1.0",
+  "preferGlobal": true,
+  "main": "dist/index.js",
+  "scripts": {
+    "postinstall": "npm run build",
+    "prepublishOnly": "npm run build",
+    "build": "tsc",
+    "build:watch": "tsc -w",
+    "lint": "tslint 'src/**/*.ts' --exclude 'src/**/*.d.ts'",
+    "lint:fix": "npm run lint -- --fix"
+  },
+  "license": "MIT",
+  "repository": "git+https://github.com/JosephDuffy/consequences-hue",
+  "keywords": [
+    "consequences-addon",
+    "hue",
+    "philips-hue"
+  ],
+  "peerDependencies": {
+    "consequences": "^0.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^8.0.30",
+    "consequences": "josephduffy/consequences",
+    "tslint": "^5.7.0",
+    "tslint-misc-rules": "^3.1.3",
+    "typescript": "^2.5.2"
+  },
+  "dependencies": {
+    "huejay": "^1.7.0"
+  }
+}
